@@ -1,0 +1,125 @@
+:root {
+  --background-one: darkslategray;
+  --background-two: darkslategray;
+	--circle-light: #7393B3;
+	--circle-dark: darkslategray;
+}
+body{
+	display: flex;
+  flex-direction: row;
+	justify-content: center;
+}
+body>*{
+	height: 30vw;
+	width: 30vw;
+}
+.dark{
+	background: var(--circle-dark)
+}
+.light{
+	background: var(--circle-light)
+}
+.container-one,.container-two{
+	display:grid;
+	grid-template-columns: 5fr 4fr;
+	gap: 3%;
+}
+.container-one{
+	background: var(--background-one);
+}
+.container-two{
+	background: var(--background-two);
+}
+.container-one>*,.container-two>*{
+	display:flex;
+	flex-direction: row;
+}
+.item-container{
+	width: 100%;
+	align-self: center;
+	z-index:3;
+}
+.head{
+	position: relative;
+	width: 80px;
+	height: 100px;
+	margin: 26% 0;
+	transform: translateX(100%);
+	background: var(--circle-light);
+	border-radius: 10px;
+}
+.tri{
+	width: 15px;
+	height: 100px;
+	border: 60px solid transparent;
+	border-right-color: var(--circle-light);
+}
+.circle-container-one{
+	position: relative;
+	overflow: hidden;
+}
+.circles-shadow{
+	position:relative;
+	width: 100%;
+	height: 30%;
+	border-radius: 50%;
+	top: 35%;
+	transform: translateX(-75%);
+	box-shadow:
+		0 0 0 10px var(--circle-light),
+		0 0 0 20px var(--background-one),
+		0 0 0 30px var(--circle-light),
+		0 0 0 40px var(--background-one),
+		0 0 0 50px var(--circle-light)
+	}
+	
+.circle-container-two{
+	position: relative;
+	left: -100%;
+	z-index:1;
+}
+.circle{
+	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translate(0%,-50%);
+}
+.circle-1{
+	width: 200px;
+	height: 200px;
+	left: 80px;
+}
+.circle-2{
+	width: 180px;
+	height: 180px;
+	left: 90px;
+}
+.circle-3{
+	width: 160px;
+	height: 160px;
+	left: 100px;
+}
+.circle-4{
+	width: 140px;
+	height: 140px;
+	left: 110px;
+}
+.circle-5{
+	width: 120px;
+	height: 120px;
+	left: 120px;
+}
+.circle-6{
+	width: 100px;
+	height: 100px;
+	left: 130px;
+}
+.container-left{
+	position: absolute;
+	z-index:2;
+	width: 120px;
+	right: 32%;
+	height: 30vw;
+	background: var(--background-one);
+}
+
